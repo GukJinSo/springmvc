@@ -95,4 +95,12 @@ public class RequestParamController {
         return "ok";
     }
 
+    @ResponseBody
+    @RequestMapping("/model-attribute-V1")
+    public String modelAttributeV1(@RequestParam Map<String, Object> paramMap) {
+        log.info("username={}, age={}", paramMap.get("username"),
+                paramMap.get("age"));
+        return "ok";
+    }
+
 }
